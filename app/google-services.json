@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "391656154983",
+    "firebase_url": "https://looklikegoddess.firebaseio.com",
+    "project_id": "looklikegoddess",
+    "storage_bucket": "looklikegoddess.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:391656154983:android:18fbecef6a1cb3f7",
+        "android_client_info": {
+          "package_name": "com.anddev.ndg.looklikegoddess"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "391656154983-isrpn6fb19k4hfcl5c2la300ci1d0r2g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.anddev.ndg.looklikegoddess",
+            "certificate_hash": "7038a7037bc19e3bf8b2b00ede1894e97a11a771"
+          }
+        },
+        {
+          "client_id": "391656154983-f25031ur12f880larhp2itire2k0jqqj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAQbXUE_QzllwY-wrORg21zAh5AD1I_KI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "391656154983-f25031ur12f880larhp2itire2k0jqqj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
