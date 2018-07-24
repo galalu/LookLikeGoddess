@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void updateUI(FirebaseUser currentUser) {
-        mNameView.setText(currentUser.getDisplayName());
+        mNameView.setText(currentUser.getEmail());
     }
 
     private void intstantiateUser(){
@@ -125,7 +125,8 @@ public class MainActivity extends AppCompatActivity {
             if (resultCode == RESULT_OK) {
                 // Successfully signed in
                 FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-                Toast.makeText(MainActivity.this, user.getDisplayName(), Toast.LENGTH_LONG);
+                updateUI(user);
+               // Toast.makeText(MainActivity.this, user.getDisplayName(), Toast.LENGTH_LONG);
 
 
                 // ...
