@@ -3,4 +3,17 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="fileDividerColor">#FFECF0F8</color>
+    <color name="colorOverlay">#78ffffff</color>
+    <color name="textColorNavy">#335898</color>
+    <color name="grayBlue">#FFDBE3F2</color>
+    <color name="errorRed">#F04D64</color>
+    <color name="bottomSheetItemTextColor">#4A4A4A</color>
+    <color name="colorTransparent">#00000000</color>
+    <color name="colorTiffanyBlue">#33CFB7</color>
+    <color name="profileDataTitleColor">#9B9B9B</color>
+    <color name="tabLayoutItemTextColor">#FF406EBE</color>
+    <color name="input_control_label_inactive">#FFAAAAAA</color>
+    <color name="blur_edit_overlay">#99FFFFFF</color>
 </resources>
