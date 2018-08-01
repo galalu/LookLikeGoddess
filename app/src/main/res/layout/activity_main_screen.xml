@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="8"
+    android:layout_marginTop="24dp"
+    android:columnCount="2"
+    android:rowCount="3"
+    tools:context=".MainScreenActivity">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardProfile"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_columnWeight="1"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_rowWeight="1"
+        app:cardBackgroundColor="@color/colorWhite">
+
+
+
+        <Button
+            android:id="@+id/button_main_action1"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="@dimen/main_action_button_width_small"
+            android:layout_height="@dimen/main_action_button_height_small"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+            android:background="@drawable/button_shape"
+            android:text="@string/userProfile"
+            android:stateListAnimator="@animator/button_state_list_anim_custom"
+            android:textSize="@dimen/text_size_small" />
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardPreWorkout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_columnWeight="1"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_rowWeight="1"
+        app:cardBackgroundColor="@color/colorAccent" >
+        <Button
+            android:id="@+id/button_main_action2"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="@dimen/main_action_button_width_small"
+            android:layout_height="@dimen/main_action_button_height_small"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+            android:background="@drawable/button_shape_blue"
+            android:text="@string/preWorkout"
+            android:stateListAnimator="@animator/button_state_list_anim_custom"
+            android:textSize="@dimen/text_size_small" />
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardWorkout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_columnWeight="1"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_rowWeight="1"
+        app:cardBackgroundColor="@color/colorWhite">
+
+
+    <Button
+        android:id="@+id/button_main_action"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="@dimen/main_action_button_width_small"
+        android:layout_height="@dimen/main_action_button_height_small"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+        android:background="@drawable/button_shape"
+        android:text="@string/workout"
+        android:stateListAnimator="@animator/button_state_list_anim_custom"
+        android:textSize="@dimen/text_size_small" />
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardStretch"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_columnWeight="1"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_rowWeight="1"
+        app:cardBackgroundColor="@color/colorPrimary" >
+
+        <Button
+            android:id="@+id/button_main_action4"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="@dimen/main_action_button_width_small"
+            android:layout_height="@dimen/main_action_button_height_small"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+            android:background="@drawable/button_shape"
+            android:text="@string/stretch"
+            android:stateListAnimator="@animator/button_state_list_anim_custom"
+            android:textSize="@dimen/text_size_small" />
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardMealPlan"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_columnWeight="1"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_rowWeight="1"
+        app:cardBackgroundColor="@color/colorWhite" >
+
+        <Button
+            android:id="@+id/button_main_action5"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="@dimen/main_action_button_width_small"
+            android:layout_height="@dimen/main_action_button_height_small"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+            android:background="@drawable/button_shape_blue"
+            android:text="@string/mealPlan"
+            android:stateListAnimator="@animator/button_state_list_anim_custom"
+            android:textSize="@dimen/text_size_small" />
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardTipOfDay"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_columnWeight="1"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_rowWeight="1"
+        app:cardBackgroundColor="@color/colorPrimaryDark" >
+
+        <Button
+            android:id="@+id/button_main_action6"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="@dimen/main_action_button_width_small"
+            android:layout_height="@dimen/main_action_button_height_small"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+            android:background="@drawable/button_shape"
+            android:text="@string/tipOfDay"
+            android:stateListAnimator="@animator/button_state_list_anim_custom"
+            android:textSize="@dimen/text_size_small" />
+    </android.support.v7.widget.CardView>
+</GridLayout>

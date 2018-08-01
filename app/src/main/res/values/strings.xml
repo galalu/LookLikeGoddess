@@ -14,4 +14,10 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+    <string name="userProfile">Profile</string>
+    <string name="preWorkout">Pre-workout</string>
+    <string name="workout">Workout</string>
+    <string name="stretch">Stretch</string>
+    <string name="mealPlan">Meal Plan</string>
+    <string name="tipOfDay">Tip of day</string>
 </resources>
