@@ -20,4 +20,120 @@
     <string name="stretch">Stretch</string>
     <string name="mealPlan">Meal Plan</string>
     <string name="tipOfDay">Tip of day</string>
+
+
+    <string name="mealPlanText">
+<![CDATA[ Monday
+Breakfast
+3 Scrambled Eggs
+1 large grapefruit
+Snack
+25 almonds
+Lunch
+Turkey Wrap
+1 apple
+Snack
+1 piece of string cheese
+Dinner
+Spicy Chicken and Pasta
+Side salad and 2 Tbsp olive oil/vinegar dressing
+
+Tuesday
+Breakfast
+2 Tbsp of peanut butter with 1 piece of toast
+1 banana
+Snack
+2 small boxes of raisins
+Lunch
+Leftover Spicy Chicken and Pasta
+Snack
+0% fat Greek yogurt
+Dinner
+Miso Salmon
+2 cups of broccoli
+
+Wednesday
+Breakfast
+Lean Eggs and Ham
+1 large grapefruit
+Snack
+25 almonds
+Lunch
+Black Bean and Cheese Burrito
+1 apple
+Snack
+1 piece of string cheese
+Dinner
+Veggie Burger and bun
+Salad with 4 Tbsp olive oil/vinegar dressing
+1 serving of sweet potato fries
+
+Thursday
+Breakfast
+Berry Wafflewich
+0% fat Greek yogurt
+Snack
+15 snap peas
+2 Tbsp of hummus
+Lunch
+Gobbleguac Sandwich
+1 apple
+Snack
+1 banana
+1 piece of string cheese
+Dinner
+Steamed Snapper with Pesto
+1 cup of brown rice
+2 cups of broccoli
+
+Friday
+Breakfast
+0% fat Greek yogurt
+1 large grapefruit
+Snack
+1 Luna Bar
+Lunch
+The I-Am-Not-Eating-Salad Salad
+25 almonds
+Snack
+30 baby carrots
+4 Tbsp of hummus
+Dinner
+Chicken Spinach Parm
+1 cup of brown rice
+2 cups of snow peas
+
+Saturday
+Breakfast
+Loaded Vegetable Omelet
+1 banana
+Snack
+1 piece of string cheese
+Lunch
+Turkey Wrap
+1 apple
+Snack
+10 cherry tomatoes
+2 Tbsp of hummus
+Dinner
+Quick Lemon Chicken with Rice
+2 cups of broccoli
+Snack
+1 Sugar-Free Fudgsicle
+
+Sunday
+Breakfast
+Loaded Vegetable Omelet
+1 banana
+Snack
+15 baby carrots
+2 Tbsp of hummus
+Lunch
+Eat Out
+Snack
+0% fat Greek yogurt
+Dinner
+Penne with Chicken Marengo
+2 cups of broccoli  ]]>
+</string>
 </resources>
