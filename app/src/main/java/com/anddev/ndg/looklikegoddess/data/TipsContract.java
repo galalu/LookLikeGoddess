@@ -16,7 +16,7 @@ public class TipsContract {
 
         public static final String TABLE_NAME = "tips";
         public static final String _ID = "id";
-        public static final String COLUMN_POSTER_PATH = "tipText";
+        public static final String COLUMN_TIP_TEXT = "tipText";
 
     }
 

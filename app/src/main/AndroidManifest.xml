@@ -26,6 +26,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".MealPlanActivity"></activity>
+
+        <provider
+            android:authorities="com.anddev.ndg.looklikegoddess"
+            android:name="com.anddev.ndg.looklikegoddess.data.TipsProvider"
+            android:exported="false" />
     </application>
 
 </manifest>
