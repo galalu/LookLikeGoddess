@@ -22,7 +22,9 @@ public class DBHelper extends SQLiteOpenHelper {
         sqLiteDatabase.execSQL(SQL_CREATE_FAVOURITES_TABLE);
 
         ContentValues values = new ContentValues();
-        values.put(TipsContract.TipsEntry.COLUMN_TIP_TEXT , "My text");
+        values.put(TipsContract.TipsEntry.COLUMN_TIP_TEXT , "My awesome text");
+        values.put(TipsContract.TipsEntry.COLUMN_TIP_TEXT , "My text2");
+        values.put(TipsContract.TipsEntry.COLUMN_TIP_TEXT , "My text3");
 
         sqLiteDatabase.insert(TipsContract.TipsEntry.TABLE_NAME, null, values);
 

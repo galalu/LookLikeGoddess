@@ -56,7 +56,8 @@ public class TipsProvider extends ContentProvider {
                         null,
                         null,
                         null,
-                        TipsContract.TipsEntry._ID
+                       "RANDOM()"
+                       // TipsContract.TipsEntry._ID
                 );
                 break;
             // Default exception
