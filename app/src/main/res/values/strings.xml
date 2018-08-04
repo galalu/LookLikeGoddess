@@ -151,4 +151,6 @@ Dinner
 Penne with Chicken Marengo
 2 cups of broccoli  ]]>
 </string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
 </resources>

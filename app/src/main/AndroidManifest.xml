@@ -33,7 +33,21 @@
             android:exported="false" />
 
         <activity android:name=".TipsActivity" />
-        <activity android:name=".WorkoutActivity"></activity>
+        <activity android:name=".WorkoutActivity" />
+
+        <receiver android:name=".LookLikeGoddessWidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/look_like_goddess_widget_provider_info" />
+        </receiver>
+
+        <service
+            android:name=".LookLikeGoddessIntentService"
+            android:exported="false"></service>
     </application>
 
 </manifest>

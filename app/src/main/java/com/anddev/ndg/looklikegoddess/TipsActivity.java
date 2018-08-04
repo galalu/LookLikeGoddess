@@ -8,16 +8,16 @@ import android.support.v4.widget.CursorAdapter;
 import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.widget.TextView;
 
 import com.anddev.ndg.looklikegoddess.data.TipsContract;
 
-public class TipsActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor>
-       {
+public class TipsActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor> {
 
     public static final String TAG = TipsActivity.class.getSimpleName();
     private static final int LOADER_ID = 0x01;
-
+    private Toolbar mToolbar;
     private TextView tipsTextView;
 
     @Override
@@ -27,14 +27,8 @@ public class TipsActivity extends AppCompatActivity implements LoaderManager.Loa
         tipsTextView = findViewById(R.id.tvTips);
 
         getSupportLoaderManager().initLoader(LOADER_ID, null, this);
-//
-//        Cursor tipsText = getAllTips();
-//        if (tipsText.moveToFirst()) {
-//            String tipsTextString = tipsText.getString(tipsText.getColumnIndex(TipsContract.TipsEntry.COLUMN_TIP_TEXT));
-//            tipsTextView.setText(tipsTextString);
-//        }
-
-
+        mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(mToolbar);
     }
 
     private Cursor getAllTips() {
@@ -52,6 +46,7 @@ public class TipsActivity extends AppCompatActivity implements LoaderManager.Loa
 
             String tipsTextString = cursor.getString(1);
             tipsTextView.setText(tipsTextString);
+            LookLikeGoddessIntentService.startActionUpdateTips(TipsActivity.this, tipsTextString);
         }
     }
 
