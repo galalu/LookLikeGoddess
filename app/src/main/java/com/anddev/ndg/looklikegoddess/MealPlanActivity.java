@@ -20,8 +20,6 @@ public class MealPlanActivity extends AppCompatActivity {
 
         mealPlanTextView = findViewById(R.id.mealPlanTextView);
 
-//        DBHelper dbHelper = new DBHelper(MealPlanActivity.this);
-//        SQLiteDatabase mDb = dbHelper.getReadableDatabase();
 
         Cursor tipsText = getAllTips();
         if (tipsText.moveToFirst()) {

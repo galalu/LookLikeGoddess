@@ -14,7 +14,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
         <activity
             android:name=".SigninActivity"
             android:label="@string/title_activity_signin" />
@@ -25,12 +25,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MealPlanActivity"></activity>
+        <activity android:name=".MealPlanActivity" />
 
         <provider
+            android:name=".data.TipsProvider"
             android:authorities="com.anddev.ndg.looklikegoddess"
-            android:name="com.anddev.ndg.looklikegoddess.data.TipsProvider"
             android:exported="false" />
+
+        <activity android:name=".TipsActivity" />
+        <activity android:name=".WorkoutActivity"></activity>
     </application>
 
 </manifest>
