@@ -1,15 +1,20 @@
 package com.anddev.ndg.looklikegoddess;
 
 import android.content.Intent;
+import android.media.Image;
+import android.os.CountDownTimer;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.anddev.ndg.looklikegoddess.models.ExerciseList;
+import com.anddev.ndg.looklikegoddess.network.ExercisesAPI;
 import com.firebase.ui.auth.AuthUI;
 import com.firebase.ui.auth.IdpResponse;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -17,11 +22,17 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.squareup.picasso.Picasso;
 
 import org.w3c.dom.Text;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -30,7 +41,13 @@ public class MainActivity extends AppCompatActivity {
 
     FirebaseUser mFirebaseUser;
     TextView mNameView;
+    ImageView ivExercise;
+    Button timerButton;
+    TextView timerTextView;
     private FirebaseAuth.AuthStateListener mAuthListener;
+    ArrayList<Integer> preWorkoutExercisesIds;
+    ArrayList<Integer> workoutExercisesIds;
+    ArrayList<Integer> stretchExercisesIds;
 
 
 
@@ -42,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
         intstantiateUser();
         mNameView = findViewById(R.id.tvname);
         Button btn = findViewById(R.id.btn_auth);
+        ivExercise = findViewById(R.id.iv_exercise);
         final List<AuthUI.IdpConfig> providers = Arrays.asList(
                 new AuthUI.IdpConfig.EmailBuilder().build(),
                 new AuthUI.IdpConfig.GoogleBuilder().build());
@@ -53,6 +71,45 @@ public class MainActivity extends AppCompatActivity {
                                 .setAvailableProviders(providers)
                                 .build(),
                         RC_SIGN_IN);
+            }
+        });
+        timerButton = findViewById(R.id.btntimer);
+        timerTextView = findViewById(R.id.tvtimer);
+
+
+        Integer[] intArray = new Integer[] { 354, 326, 432, 411 };
+        preWorkoutExercisesIds = new ArrayList<>(Arrays.asList(intArray));
+
+        Integer[] intWorkoutArray = new Integer[] { 98, 207, 105, 113, 408, 177, 389 };
+        workoutExercisesIds = new ArrayList<>(Arrays.asList(intWorkoutArray));
+
+        Integer[] intStretchArray = new Integer[]{166, 383, 429};
+        stretchExercisesIds = new ArrayList<>(Arrays.asList(intStretchArray));
+
+
+        final CountDownTimer countDownTimer = new CountDownTimer(60 * 1000, 1000) {
+            public void onTick(long millisUntilFinished) {
+                timerTextView.setText("Seconds remaining: " + millisUntilFinished / 1000);
+            }
+            public void onFinish() {
+                timerTextView.setText("Done !");
+            }
+        };
+
+        timerButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                countDownTimer.start();
+            }
+        });
+
+        Button start = findViewById(R.id.btnnew);
+        start.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ExersicesActivity.class);
+                intent.putExtra(ExersicesActivity.EXERCISES_ARRAY_EXTRA, preWorkoutExercisesIds );
+               startActivity(intent);
             }
         });
 
@@ -71,9 +128,44 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "Authentication failed.",
                             Toast.LENGTH_SHORT).show();
                 }
-                // ...
+
             }
         };
+
+//        loadExercises();
+        loadExercise();
+    }
+
+    private void loadExercise() {
+        LLGApp.getApi().getExercise(354).enqueue(new Callback<com.anddev.ndg.looklikegoddess.Exercise>() {
+            @Override
+            public void onResponse(Call<com.anddev.ndg.looklikegoddess.Exercise> call, Response<com.anddev.ndg.looklikegoddess.Exercise> response) {
+                mNameView.setText(response.body().getName());
+            }
+
+            @Override
+            public void onFailure(Call<com.anddev.ndg.looklikegoddess.Exercise> call, Throwable t) {
+
+            }
+        });
+    }
+
+
+    private void loadExercises() {
+        LLGApp.getApi().getExercises(1, 2).enqueue(new Callback<ExerciseList>() {
+            @Override
+            public void onResponse(Call<ExerciseList> call, Response<ExerciseList> response) {
+                mNameView.setText( response.body().exerciseList.get(2).getName());
+
+            }
+
+            @Override
+            public void onFailure(Call<ExerciseList> call, Throwable t) {
+                Toast.makeText(MainActivity.this, "failed.",
+                        Toast.LENGTH_SHORT).show();
+            }
+        });
+
     }
 
     @Override
@@ -83,7 +175,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void updateUI(FirebaseUser currentUser) {
-        mNameView.setText(currentUser.getEmail());
+    //    mNameView.setText(currentUser.getEmail());
     }
 
     private void intstantiateUser(){

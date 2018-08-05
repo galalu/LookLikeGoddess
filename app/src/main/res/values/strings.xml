@@ -15,4 +15,9 @@
         completions."
     </string>
     <string name="base_url">https://wger.de/api/v2/</string>
+
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Etiam eget ligula eu lectus lobortis condimentum.</string>
+    <string name="title_1">Exerci1</string>
+    <string name="title_2">arnold pre</string>
+    <string name="title_3">quat</string>
 </resources>
