@@ -132,41 +132,10 @@ public class MainActivity extends AppCompatActivity {
             }
         };
 
-//        loadExercises();
-        loadExercise();
-    }
-
-    private void loadExercise() {
-        LLGApp.getApi().getExercise(354).enqueue(new Callback<com.anddev.ndg.looklikegoddess.Exercise>() {
-            @Override
-            public void onResponse(Call<com.anddev.ndg.looklikegoddess.Exercise> call, Response<com.anddev.ndg.looklikegoddess.Exercise> response) {
-                mNameView.setText(response.body().getName());
-            }
-
-            @Override
-            public void onFailure(Call<com.anddev.ndg.looklikegoddess.Exercise> call, Throwable t) {
-
-            }
-        });
-    }
-
-
-    private void loadExercises() {
-        LLGApp.getApi().getExercises(1, 2).enqueue(new Callback<ExerciseList>() {
-            @Override
-            public void onResponse(Call<ExerciseList> call, Response<ExerciseList> response) {
-                mNameView.setText( response.body().exerciseList.get(2).getName());
-
-            }
-
-            @Override
-            public void onFailure(Call<ExerciseList> call, Throwable t) {
-                Toast.makeText(MainActivity.this, "failed.",
-                        Toast.LENGTH_SHORT).show();
-            }
-        });
 
     }
+
+
 
     @Override
     public void onStart() {
